@@ -1,16 +1,19 @@
-# This is a sample Python script.
+def min_max(array_of_numbers):
+    max_elem = 0 - float("inf")
+    min_elem = (float("inf"))
+    for i in range(len(array_of_numbers)):
+        temp_elem = int(array_of_numbers[i])
+        if temp_elem > max_elem:
+            max_elem = temp_elem
+        if temp_elem < min_elem:
+            min_elem = temp_elem
+    return f"{str(max_elem)} {str(min_elem)}"
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+
+def high_and_low(string_of_numbers):
+    array_of_number = string_of_numbers.split()
+    return min_max(array_of_number)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print(high_and_low("1 2 3 4 5"))
